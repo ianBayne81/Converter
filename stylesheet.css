@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    ". index-header index-header index-header ."
+    ". index-page-title index-masthead index-main-content ."
+    ". index-page-title index-masthead index-main-content ."
+    ". index-footer index-footer index-footer .";
+    grid-gap: 0;
+    padding: 10px;
+}
+.grid {   
+    background-image: url("../images/garden.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.header {
+    grid-area:index-header;
+    justify-self: center;
+    align-self: center;
+}
+.page-title {
+    grid-area: index-page-title;
+    justify-self: center;
+    align-self: center;
+}
+.masthead {
+    grid-area: index-masthead;
+    justify-self: center;
+    align-self: center;
+}
+.main-content {
+    grid-area: index-main-content;
+    justify-self: center;
+    align-self: center;
+}
+.footer {
+    grid-area: index-footer;
+    justify-self: center;
+    align-self: center;
+}
+.page-title {
+    border: 5px solid gray;
+    width: 210px;
+    height: 210px;
+    background: radial-gradient( rgb(2, 253, 2),rgb(18, 48, 18));
+    box-sizing: padding-box;
+    border-radius: 120px;
+    padding: 2px;
+    position: relative;
+}
+@-webkit-keyframes rotateY {
+    from {
+         -webkit-transform: rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateY(360deg);
+    }
+}
+.page-title:hover {
+    -webkit-animation-name: rotateY;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-iteration-count: initial;
+    -webkit-animation-timing-function: linear;
+}
+.flip1 {
+    top: 60px;
+    padding: 2px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 5px 5px 3px #212127;
+    position: relative;
+    z-index: +1;
+}
+.flip2 {
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    top: 120px;
+    left: 70px;
+}
+.flip3 {
+    top: 150px;
+    left: 60px;
+    border-radius: 80px;
+    width: 90px;
+    height: 30px;
+    border: 1px solid grey;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    background: rgb(5, 77, 5);
+    color: white;
+}
+.flip3:hover {
+    color: yellow;
+    background-color: black;
+}
+.masthead {
+    border: 5px solid gray;
+    width: 210px;
+    height: 210px;
+    background: linear-gradient( rgb(2, 253, 2),rgb(18, 48, 18));
+    box-sizing: padding-box;
+    border-radius: 120px;
+    padding: 2px;
+    position: relative;
+}
+@-webkit-keyframes rotate {
+    from {
+         -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+.masthead:hover {
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-iteration-count: initial;
+    -webkit-animation-timing-function: linear;
+}
+.rotate1 {
+    top: 60px;
+    padding: 2px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 5px 5px 3px #212127;
+    position: relative;
+    z-index: +1;
+}
+.rotate2 {
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    top: 120px;
+    left: 70px;
+}
+.rotate3 {
+    top: 150px;
+    left: 60px;
+    border-radius: 80px;
+    width: 90px;
+    height: 30px;
+    border: 1px solid grey;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    background: rgb(5, 77, 5);
+    color: white;
+}
+.rotate3:hover {
+    color: yellow;
+    background-color: black;
+}
+.main-content {
+    border: 5px solid gray;
+    width: 210px;
+    height: 210px;
+    background: repeating-radial-gradient(rgb(18, 48,18), rgb(2, 253, 2),rgb(18, 48, 18));
+    box-sizing: padding-box;
+    border-radius: 120px;
+    padding: 2px;
+    position: relative;
+}
+@-webkit-keyframes opendoor {
+    from {
+         -webkit-transform: perspective(1000px) rotateY(0deg);
+         -webkit-transform-origin: 100% 50%;
+    }
+    to {
+        -webkit-transform: perspective(1000px) rotateY(110deg);
+        -webkit-transform-origin: 100% 50%;
+    }
+}
+@-webkit-keyframes closedoor {
+    from {
+        opacity: 1;
+        -webkit-transform-origin: 100% 50%;
+    }
+    to {
+        opacity: 0;
+        -webkit-transform-origin: 100% 50%;
+    }
+}
+.main-content:hover {
+    -webkit-animation-name: opendoor;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: initial;
+    -webkit-animation-timing-function: linear;
+}
+.open1 {
+    top: 60px;
+    padding: 2px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 5px 5px 3px #212127;
+    position: relative;
+    z-index: +1;
+}
+.open2 {
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    top: 120px;
+    left: 70px;
+}
+.open3 {
+    top: 150px;
+    left: 60px;
+    border-radius: 80px;
+    width: 90px;
+    height: 30px;
+    border: 1px solid grey;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    background: rgb(5, 77, 5);
+    color: white;
+}
+.open3:hover {
+    color: yellow;
+    background-color: black;
+}
