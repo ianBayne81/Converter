@@ -3,15 +3,23 @@
     padding: 0;
 }
 
+img {
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+}
+
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    ". index-header index-header index-header ."
-    ". index-page-title index-masthead index-main-content ."
-    ". index-page-title index-masthead index-main-content ."
-    ". index-footer index-footer index-footer .";
+    ". index-page-title ."
+    ". index-masthead ."
+    ". index-main-content ."
+    ". index-footer .";
     grid-gap: 0;
     padding: 10px;
 }
@@ -52,7 +60,7 @@
     align-self: center;
 }
 
-.page-title {
+.page-title { 
     border: 5px solid gray;
     width: 210px;
     height: 210px;
@@ -273,5 +281,21 @@
     font-size: 14px;
     position: relative;
     color: white(59, 2, 2);
-    background: radial-gradient(pink, red)
+    background: radial-gradient(rgb(107, 23, 23), brown);
+}
+
+@media screen and (min-width: 736px) /*if device is over 736px below desktop version is run*/
+{
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 400px;
+    grid-template-areas:
+    ". index-header index-header index-header ."
+    ". index-page-title index-masthead index-main-content ."
+    ". index-page-title index-masthead index-main-content ."
+    ". index-footer index-footer index-footer .";
+    grid-gap: 0;
+    padding: 10px;
+}
 }
