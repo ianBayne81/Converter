@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
 }
+ 
+body {   
+    background-image: url("../images/garden.jpg");
+    background-size: cover;
+    background-position: center;
+}
 
 img {
     border-radius: 5px;
@@ -22,12 +28,6 @@ button {
     ". index-footer .";
     grid-gap: 0;
     padding: 10px;
-}
-
-.grid {   
-    background-image: url("../images/garden.jpg");
-    background-size: cover;
-    background-position: center;
 }
 
 .header {
@@ -57,7 +57,7 @@ button {
 .footer {
     grid-area: index-footer;
     justify-self: center;
-    align-self: center;
+    align-self: end;
 }
 
 .page-title { 
@@ -71,7 +71,7 @@ button {
     position: relative;
 }
 
-@-webkit-keyframes rotateY {
+@keyframes rotateY {
     from {
          -webkit-transform: rotateY(0deg);
     }
@@ -81,10 +81,10 @@ button {
 }
 
 .page-title:hover {
-    -webkit-animation-name: rotateY;
-    -webkit-animation-duration: 0.5s;
-    -webkit-animation-iteration-count: initial;
-    -webkit-animation-timing-function: linear;
+    animation-name: rotateY;
+    animation-duration: 0.5s;
+    animation-iteration-count: initial;
+    animation-timing-function: linear;
 }
 
 .flip1 {
@@ -145,20 +145,20 @@ button {
     position: relative;
 }
 
-@-webkit-keyframes rotate {
+@keyframes rotate {
     from {
-         -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     to {
-        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 .masthead:hover {
-    -webkit-animation-name: rotate;
-    -webkit-animation-duration: 0.5s;
-    -webkit-animation-iteration-count: initial;
-    -webkit-animation-timing-function: linear;
+    animation-name: rotate;
+    animation-duration: 0.5s;
+    animation-iteration-count: initial;
+    animation-timing-function: linear;
 }
 
 .rotate1 {
@@ -219,22 +219,22 @@ button {
     position: relative;
 }
 
-@-webkit-keyframes opendoor {
+@keyframes opendoor {
     from {
-         -webkit-transform: perspective(1000px) rotateY(0deg);
-         -webkit-transform-origin: 100% 50%;
+        transform: perspective(1000px) rotateY(0deg);
+        transform-origin: 100% 50%;
     }
     to {
-        -webkit-transform: perspective(1000px) rotateY(110deg);
-        -webkit-transform-origin: 100% 50%;
+        transform: perspective(1000px) rotateY(110deg);
+        transform-origin: 100% 50%;
     }
 }
 
 .main-content:hover {
-    -webkit-animation-name: opendoor;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-iteration-count: initial;
-    -webkit-animation-timing-function: linear;
+    animation-name: opendoor;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+    animation-timing-function: linear;
 }
 
 .open1 {
@@ -289,7 +289,7 @@ button {
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 400px;
+    grid-template-rows: 1fr 1fr 1fr 200px;
     grid-template-areas:
     ". index-header index-header index-header ."
     ". index-page-title index-masthead index-main-content ."
